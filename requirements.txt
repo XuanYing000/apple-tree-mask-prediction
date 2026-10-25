@@ -1,0 +1,10 @@
+numpy>=1.24
+scipy>=1.10
+pillow>=9.5
+scikit-learn>=1.2     # only used by the verification tests
+scikit-image>=0.21
+matplotlib>=3.7       # only used in the notebook
+pytest>=7.4
+pdoc>=14.0
+# U-Net only (install the build that matches your CUDA, see https://pytorch.org):
+torch>=2.1
