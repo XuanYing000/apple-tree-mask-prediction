@@ -2,6 +2,8 @@
 
 MMA3001 project, Dataset 1 (RGB-D apple-tree reconstruction and orchard mapping).
 
+Data: MMA3001 Project Datasets, Dataset 1 (with summer ground truth), supplied by the unit on Moodle. It is not included in this repository. Link: (drive.google.com/drive/folders/13eo790JWqCG11PpBQtxzf1ditf9pU63S) 
+
 ## What this does
 
 Given **one summer RGB-D image** of a tree (640x480; depth as an 8-bit grey image,
@@ -15,12 +17,12 @@ Predictions are scored against that ground truth on trees from **rows never used
 
 ### Status of the results
 
-All recorded numbers come from the notebook in `notebooks/`; regenerate them with the scripts below.
+All recorded numbers come from the notebook in the repository root (Apple_Tree_Project.ipynb); regenerate them with the scripts below.
 
 | Result (notebook run) | Value |
 |---|---|
 | Mean-mask baseline, test Dice | 0.371 +/- 0.087 (106 test trees, 4 test rows) |
-| Ridge minus baseline, 10 random row splits | +0.020 mean, better in 10/10 splits |
+| Ridge minus baseline, 10 random row splits | +0.021 mean, better in 10/10 splits |
 | U-Net (one split, one seed), test Dice | 0.408 +/- 0.124 |
 | Shape-model ceiling (best possible with K components) | about 0.72 |
 
@@ -71,7 +73,7 @@ tree and continues (`"raise"` stops). Model code validates shapes, `alpha > 0`, 
 appleskel/   data, splits, metrics, features, shape_model, ridge, pipeline, unet, skeleton, lift3d, profiling, synthetic
 tests/       pytest verification tests (see below)
 scripts/     one script per experiment
-notebooks/   exploratory notebook (source of the numbers above)
+Apple_Tree_Project.ipynb   analysis notebook in the repo root (source of the numbers above) 
 AI_LOG.md    record of AI assistance
 ```
 
@@ -85,4 +87,4 @@ Test report: `python -m pytest --junitxml=results/test_report.xml`.
 
 ## Licence
 
-MIT, see `LICENSE`. Set your name in the licence before submitting.
+MIT, see `LICENSE`.
